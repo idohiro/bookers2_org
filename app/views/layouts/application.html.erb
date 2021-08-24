@@ -15,13 +15,13 @@
         <header>
               <% if user_signed_in? %>
       <li>
-        <%= link_to "Booker2", index_home_path, method: :index, class: 'nav-link text-dark' %>
+        <%= link_to "Booker2", root_path, class: 'nav-link text-darkcd ..' %>
       </li>
         <li>
-        <%= link_to "Home", index_home_path, method: :index, class: 'nav-link text-dark' %>
+        <%= link_to "Home", root_path, class: 'nav-link text-dark' %>
       </li>
       <li>
-        <%= link_to "About", about_home_path, method: :index, class: 'nav-link text-dark' %>
+        <%= link_to "About", homes_about_path, class: 'nav-link text-dark' %>
       </li>
 
       <li>
