@@ -1,0 +1,49 @@
+<main>
+  <div class="container px-5 px-sm-0">
+    <div class="row">
+      <div class="col-md-3">
+        <h2>User Info</h2>
+         <%= image_tag('profile.jpg') %>
+        <table class="table">
+          <tr>
+            <th>name</th>
+            <th>ido</th>
+          </tr>
+          <tr>
+            <td>Introduction</td>
+          </tr>
+        </table>
+        <div class="row">
+          <a class="btn btn-outline-secondary btn-block fas fa-user-cog"></a>
+        </div>
+        <h3>New Book</h3>
+        <%= form_with model:@book, local:true do |f| %>
+
+      <h4>タイトル</h4>
+      <%= f.text_field :Title %>
+
+      <h4>Option</h4>
+      <%= f.text_area :body %>
+
+      <%= f.submit '投稿' %>
+
+      <% end %>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 offset-md-1">
+    <h2>Book</h2>
+          <% @blogs.each do |blog| %>
+        <div class="blog-item">
+          <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+          <section class="blog-text">
+            <h3 class="blog-text-heading"><%= link_to blog.title, blog_path(blog) %></h3>
+            <p class="blog-date"><%= blog.created_at %></p>
+            <span class="category"><%= blog.category %></span>
+          </section>
+        </div>
+      <% end %>
+    
+  </div>
+</main>
