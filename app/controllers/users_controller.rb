@@ -23,10 +23,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    session.edit(:user_id)
+       @user = User.find(params[:id])
+    @user.update(user_params)
   @current_user = nil
   flash[:alert] = 'You have profile edit successfully'
   redirect_to :root
+  end
+
+  def edit
+     @user = User.find(params[:id])
   end
 
 

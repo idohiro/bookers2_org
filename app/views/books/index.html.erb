@@ -34,16 +34,26 @@
   </div>
   <div class="col-md-8 offset-md-1">
     <h2>Book</h2>
-          <% @blogs.each do |blog| %>
-        <div class="blog-item">
-          <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
-          <section class="blog-text">
-            <h3 class="blog-text-heading"><%= link_to blog.title, blog_path(blog) %></h3>
-            <p class="blog-date"><%= blog.created_at %></p>
-            <span class="category"><%= blog.category %></span>
-          </section>
-        </div>
+          <% @books.each do |book| %>
+        <table>
+          <th>
+            <th>
+
+            </th>
+            <th>
+              title
+            </th>
+            <th>options</th>
+          </th>
+          <tb>
+            <td><%= image_tag('profile.jpg') %></td>
+            <td><%= book.created_at %></td>
+          <td>
+            <%= book.created_at %></td>
+          </td>
+          </tb>
+        </table>
       <% end %>
-    
+
   </div>
 </main>

@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
     # has_many:PostImages, dependent::destroy
+      validates :email, presence: true
+      validates :body, presence: true
 
 end
 

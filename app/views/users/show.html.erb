@@ -31,9 +31,28 @@
 
       </div>
       <div class="col-md-8 offset-md-1">
+        <div class="col-md-8 offset-md-1">
+    <h2>Book</h2>
+          <% @books.each do |book| %>
+        <table>
+          <th>
+            <th>
 
+            </th>
+            <th>
+              title
+            </th>
+            <th>options</th>
+          </th>
+          <tb>
+            <td><%= image_tag('profile.jpg') %></td>
+            <td><%= book.created_at %></td>
+          <td>
+            <%= book.created_at %></td>
+          </td>
+          </tb>
+        </table>
       </div>
     </div>
   </div>
-
 </main>
