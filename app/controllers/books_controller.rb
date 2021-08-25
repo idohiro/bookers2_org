@@ -5,9 +5,13 @@ class BooksController < ApplicationController
 
   def create
     @books = Book.new(book_params)
-    book.save
-    # 以下の行を修正
-    redirect_to book_path(book.id)
+         @book = @book.new(message_params)
+     if @book.save
+       redirect_to homes_path(@homes), notice: 'メッセージが送信されました'
+     else
+      flash.now[:alert] = 'メッセージを入力してください。'
+       render :index
+     end
   end
 
   def index
@@ -21,8 +25,21 @@ class BooksController < ApplicationController
   def destroy
   end
 
+  def update
+    @books = Book.new(book_params)
+         @book = @book.new(message_params)
+     if @book.save
+       redirect_to homes_path(@homes), notice: '投稿内容が変更されました'
+     else
+      flash.now[:edit] = 'メッセージを入力してください。'
+       render :index
+     end
+  end
+
   private
   def book_params
     params.require(:book).permit(:title,  :body)
   end
+
+
 end

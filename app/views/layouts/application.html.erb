@@ -13,6 +13,8 @@
   <body>
       <body>
         <header>
+            <%= flash[:alert] %>
+
               <% if user_signed_in? %>
       <li>
         <%= link_to "Booker2", root_path, class: 'nav-link text-dark' %>
@@ -36,7 +38,9 @@
       </li>
     <% end %>
         </header>
-
+  <main>
+    <%= flash[:success] %>
+  </main>
 
     <footer >
       <div class="container mt-5">
