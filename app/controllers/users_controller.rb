@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  def name
-  end
   def show
+    @users = User.all
      @user = current_user
   end
 
@@ -16,8 +15,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-  session.delete(:user_id)
-  @current_user = nil
+　@user =User.session.delete(:user_id)
+
   flash[:alert] = 'ログアウトしました'
   redirect_to :root
   end
@@ -33,7 +32,5 @@ class UsersController < ApplicationController
   def edit
      @user = User.find(params[:id])
   end
-
-
 
 end

@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
     # has_many:PostImages, dependent::destroy
       validates :email, presence: true
-      validates :body, presence: true
+      validates :name, presence: true, length: {maximum: 20, minimum:1}
 
 end
 
