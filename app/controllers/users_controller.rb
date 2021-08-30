@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @users = User.all
     @user =  User.find(params[:id])
-    @books = @user.book.page(params[:page]).reverse_order
+    @books = @user.books
   end
 
   def create
