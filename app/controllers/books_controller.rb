@@ -3,7 +3,7 @@ class BooksController < ApplicationController
 
 def index
       @books = Book.all
-      @book = Book.find(params[:id])
+        @book - Book.new
 end
 
   def new
@@ -11,10 +11,11 @@ end
   end
 
   def create
-    @books = Book.new(book_params)
-         @book = @book.new(book_params)
+    @book = Book.new(book_params)
+    @book = @book.new(book_params)
+     @book.user_id = current_user.id
      if @book.save
-       redirect_to homes_path(@homes), notice: 'メッセージが送信されました'
+       redirect_to books_path(), notice: 'メッセージが送信されました'
      else
       flash.now[:alert] = 'メッセージを入力してください。'
        render :index
@@ -26,7 +27,7 @@ end
   end
 
   def destroy
-          book = Book.find(params[:id])
+          @book = Book.find(params[:id])
     book.destroy
     redirect_to book_path
   end
