@@ -36,7 +36,7 @@ end
     @books = Book.new(book_params)
          @book = @book.new(message_params)
      if @book.save
-       redirect_to homes_path(@homes), notice: '投稿内容が変更されました'
+       redirect_to index_user_path(), notice: '投稿内容が変更されました'
      else
       flash.now[:edit] = 'メッセージを入力してください。'
        render :index
