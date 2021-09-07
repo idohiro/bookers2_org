@@ -25,7 +25,7 @@
                   </li>
                    <% if user_signed_in? %>
                    <li>
-                      <p class="nav-item"><%= link_to "user" ,user_path(current_user.id),class: 'fas fa-users nav-link text-light' %></p>
+                      <p class="nav-item"><%= link_to "user" ,user_path,class: 'fas fa-users nav-link text-light' %></p>
                     </li>
                     <li>
                       <p class="nav-item"><%= link_to "book" ,books_path,class: 'fas fa-book-open nav-link text-light' %></p>
