@@ -1,21 +1,5 @@
 <main>
-  <div class="container px-5 px-sm-0">
-    <div class="row">
-        <div class="col-md-3">
-          <h2>User Info</h2>
-           <%= image_tag('profile.jpg') %>
-          <table class="table">
-            <tr>
-              <th>name</th>
-              <td><%= @user.name %></td>
-            <tr>
-              <td>Introduction</td>
-              <td><%= @user.introduction %></td>
-            </tr>
-          </table>
-          <div class="row">
-          <%= link_to 'Introduction',edit_user_path, class:'btn btn-outline-secondary btn-block fas fa-user-cog'%>
-          </div>
+  <%= render 'users/list', users: @users %>
           <h3>New Book</h3>
           <%= form_with model:@book, local:true do |f| %>
 
@@ -26,7 +10,7 @@
         <%= f.text_area :body %>
         <div>
 
-        <%= f.submit 'Create book' , class:'btn btn-success'%>
+        <%= f.submit 'Create book', class:'btn btn-success' %>
         </div>
 
         <% end %>
@@ -36,7 +20,7 @@
     <div class="col-md-8 offset-md-1">
           <div class="col-md-8 offset-md-1">
           <h2>Book</h2>
-          <table>
+          <table class="table table-hover table-inverse">
             <tr>
               <th>
                 title
@@ -45,9 +29,13 @@
             </tr>
              <% @books.each do |book| %>
             <tr>
-              <td><%= image_tag('profile.jpg') %></td>
+              <td><%= image_tag('profile.jpg') %>
+              <%= @users.name %></td>
+
               <td><%= @book.title %></td>
               <td><%= @book.body %></td>
+              <td class="btn btn-sm btn-success"><%= link_to "edit", edit_book_path(@book.id) %></td>
+              <td class="btn btn-sm btn-danger"><%= link_to "destroy",book_path(@book),method:delete %></td>
             </tr>
              <% end %>
           </table>

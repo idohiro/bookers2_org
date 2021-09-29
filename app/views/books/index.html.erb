@@ -26,7 +26,7 @@
         <%= f.text_area :body %>
         <div>
 
-        <%= f.submit 'Create book' , class:'btn btn-success'%>
+        <%= f.submit 'Create book',class:'btn btn-success'%>
         </div>
 
         <% end %>
@@ -34,7 +34,7 @@
   <div class="col-md-8 offset-md-1">
     <h2>Book</h2>
           <% @books.each do |book| %>
-        <table>
+        <table class="table table-hover table-inverse">
           <th>
             <th>
 

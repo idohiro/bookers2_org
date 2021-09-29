@@ -1,22 +1,5 @@
 <main>
-  <div class="container px-5 px-sm-0">
-    <div class="row">
-        <div class="col-md-3">
-          <h2>User Info</h2>
-           <%= image_tag('profile.jpg') %>
-          <table class="table">
-            <tr>
-              <th>name</th>
-              <td><%= @users.name %></td>
-              </tr>
-            <tr>
-              <td>Introduction</td>
-              <td><%= @users.introduction %></td>
-            </tr>
-          </table>
-          <div class="row">
-          <%= link_to 'Introduction',edit_user_path, class:'btn btn-outline-secondary btn-block fas fa-user-cog'%>
-          </div>
+<%= render 'users/list', users: @users %>
           <h3>New Book</h3>
           <%= form_with model:@book, local:true do |f| %>
 
@@ -36,7 +19,7 @@
         </div>
     <div class="col-md-8 offset-md-1">
           <div class="col-md-8 offset-md-1">
-          <h2>Book</h2>
+          <h2>Book detail</h2>
           <table>
             <tr>
               <th>

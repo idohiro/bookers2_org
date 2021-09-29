@@ -13,43 +13,45 @@
   <body>
       <body>
         <header>
-            <%= flash[:alert] %>
 
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
               <div class ="navbar-nav container">
-                <a><%= link_to "Booker2", root_path, class: 'navbar-brand text-light' %></a>
-                <ul class="navbar-nav ml-auto">
+                <a><%= link_to "Bookers", root_path, class: 'navbar-brand text-light' %></a>
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav ml-auto">
                     <li>
-                    <p class="nav-item"><%= link_to "Home", root_path, class: 'fas fa-home nav-link text-light' %></p>
-                  </li>
-                   <% if user_signed_in? %>
-                   <li>
-                      <p class="nav-item"><%= link_to "user" ,user_path,class: 'fas fa-users nav-link text-light' %></p>
+                    <%= link_to "Home", root_path, class: 'fas fa-home nav-link text-light' %>
                     </li>
-                    <li>
-                      <p class="nav-item"><%= link_to "book" ,books_path,class: 'fas fa-book-open nav-link text-light' %></p>
-                    </li>
-
+                     <% if user_signed_in? %>
                      <li>
-                      <p class="nav-item"><%= link_to "Logout" ,destroy_user_session_path, method: :delete,class: 'fas fa-sign-out-alt nav-link text-light' %></p>
+                       <%= link_to "user" ,users_path,class: 'fas fa-users nav-link text-light' %>
+                      </li>
+                      <li>
+                       <%= link_to "book" ,books_path,class: 'fas fa-book-open nav-link text-light' %>
+                      </li>
+
+                       <li>
+                       <%= link_to "Logout" ,destroy_user_session_path, method: :delete,class: 'fas fa-sign-out-alt nav-link text-light' %>
+                      </li>
+                         <% else %>
+                    <li>
+                     <%= link_to "About", homes_about_path, class: 'fas fa-users nav-link text-light' %>
                     </li>
-                       <% else %>
-                  <li>
-                    <p class="nav-item"><%= link_to "About", homes_about_path, class: 'fas fa-users nav-link text-light' %></p>
-                  </li>
-                  <li>
-                     <p class="nav-item"><%= link_to "Login",  new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %></p>
-                  </li>
-                   <li>
-                    <p class="nav-item"><%= link_to "sign_up", new_user_registration_path, class: 'fas fa-user-plus nav-link text-light' %></p>
-                  </li
+                    <li>
+                       <%= link_to "Login",  new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %>
+                    </li>
+                     <li>
+                     <%= link_to "sign_up", new_user_registration_path, class: 'fas fa-user-plus nav-link text-light' %>
+                    </li>
                   </ul>
+                </div>
                 <% end %>
               </div>
             </nav>
         </header>
   <main>
+      <%= flash[:alert] %>
     <%= flash[:success] %>
   </main>
 <%= yield %>

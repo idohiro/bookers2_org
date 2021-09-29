@@ -38,7 +38,7 @@ end
      if @book.save
        redirect_to index_user_path(), notice: '投稿内容が変更されました'
      else
-      flash.now[:edit] = 'メッセージを入力してください。'
+      flash.now[:edit] = 'sucess logout。'
        render :index
      end
   end
