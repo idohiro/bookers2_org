@@ -441,3 +441,204 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_in" for 153.170.79.131 at 2021-12-22 05:39:21 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 113ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 153.170.79.131 at 2021-12-22 05:40:23 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 139ms (Views: 137.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 153.170.79.131 at 2021-12-22 05:40:25 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2/app/views/devise/registrations/new.html.erb:33: syntax error, unexpected class, expecting ')'
+...pend=( f.submit "Sign up" class:btn 'btn-sm btn-success' );@...
+...                          ^~~~~
+/home/ec2-user/environment/bookers2/app/views/devise/registrations/new.html.erb:33: syntax error, unexpected tSTRING_BEG, expecting '.' or &. or :: or '['
+... f.submit "Sign up" class:btn 'btn-sm btn-success' );@output...
+...                              ^):
+  
+app/views/devise/registrations/new.html.erb:33: syntax error, unexpected class, expecting ')'
+app/views/devise/registrations/new.html.erb:33: syntax error, unexpected tSTRING_BEG, expecting '.' or &. or :: or '['
+Started GET "/users/sign_up" for 153.170.79.131 at 2021-12-22 05:40:39 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2/app/views/devise/registrations/new.html.erb:33: syntax error, unexpected class, expecting ')'
+...pend=( f.submit "Sign up" class:'btn btn-sm btn-success' );@...
+...                          ^~~~~
+/home/ec2-user/environment/bookers2/app/views/devise/registrations/new.html.erb:33: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+...lass:'btn btn-sm btn-success' );@output_buffer.safe_append='
+...                              ^
+/home/ec2-user/environment/bookers2/app/views/devise/registrations/new.html.erb:35: syntax error, unexpected end, expecting ')'
+'.freeze;       end 
+                ^~~
+/home/ec2-user/environment/bookers2/app/views/devise/registrations/new.html.erb:42: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/bookers2/app/views/devise/registrations/new.html.erb:44: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/devise/registrations/new.html.erb:33: syntax error, unexpected class, expecting ')'
+app/views/devise/registrations/new.html.erb:33: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:42: syntax error, unexpected ensure, expecting ')'
+app/views/devise/registrations/new.html.erb:44: syntax error, unexpected end, expecting ')'
+Started GET "/users/sign_up" for 153.170.79.131 at 2021-12-22 05:40:52 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 82ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 153.170.79.131 at 2021-12-22 05:41:51 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 98ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 153.170.79.131 at 2021-12-22 05:41:54 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 153.170.79.131 at 2021-12-22 05:41:57 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 93ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:45:52 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:46:30 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 97ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:46:32 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 75ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:07 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:09 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:10 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 75ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:10 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:10 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:11 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:30 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 70ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:31 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.170.79.131 at 2021-12-22 06:49:32 +0000
+Cannot render console from 153.170.79.131! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
