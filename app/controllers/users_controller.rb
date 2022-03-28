@@ -1,14 +1,15 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    @user =  User.find(params[:id])
-    @books = @user.books
+    @user = current_user
+    @book = Book.new
   end
 
   def show
     @users = User.all
-    @user =  User.find(params[:id])
+    @user = current_user
     @books = @user.books
+    @book = Book.new
   end
 
   def create
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
   def destroy
 　@user =User.session.delete(:user_id)
 
-  flash[:alert] = 'ログアウトしました'
+  flash[:alert] = 'Signed out successfully.'
   redirect_to :root
   end
 

@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
        has_many:books
       validates :email, presence: true
-      validates :name, presence: true, length: {maximum: 20, minimum:1}
+      validates :name, presence:true, length: {maximum: 20, minimum:2}
+
 
 end
 

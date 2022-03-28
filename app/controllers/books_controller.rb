@@ -2,27 +2,29 @@ class BooksController < ApplicationController
   before_action :authenticate_user!,except: [:top]
 
 def index
-      @books = Book.all
-        @book - Book.new
+    @user = current_user
+    @books = Book.all
+    @book = Book.new
 end
 
   def new
-
+ @book = Book.new
   end
 
   def create
+
     @book = Book.new(book_params)
-    @book = @book.new(book_params)
      @book.user_id = current_user.id
      if @book.save
-       redirect_to books_path(), notice: 'メッセージが送信されました'
+       redirect_to books_path(), notice: '登録されました。'
      else
-      flash.now[:alert] = 'メッセージを入力してください。'
+      flash.now[:alert] = 'エラーが出ました。 '
        render :index
      end
   end
 
   def show
+      @user = current_user
       @book = Book.find(params[:id])
   end
 
