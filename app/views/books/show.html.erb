@@ -56,6 +56,9 @@
 
               <td><%= @book.title %></td>
               <td><%= @book.body %></td>
+              
+              <td class="btn btn-sm btn-success"><%= link_to "edit", edit_book_path(@book) %></td>
+                <td class="btn btn-sm btn-danger"><%= link_to "destroy",book_path(@book),method: :delete %></td>
             </tr>
              </tbody>
           </table>
