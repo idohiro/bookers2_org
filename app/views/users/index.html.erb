@@ -5,7 +5,7 @@
 <%#= render 'users/list', user: @user ,users: @users , book: @book %>
         <div class="col-md-3">
           <h2>User Info</h2>
-           <%= image_tag('no_image.jpg') %>
+           <%#= image_tag @user.get_profile_image(100,100) %> <%= image_tag('no_image.jpg') %>
           <table class="table">
 
             <tr>
@@ -43,17 +43,18 @@
       <table class="table table-hover table-inverse">
         <tr>
           <th>
-            images
+            image
           </th>
           <th>name</th>
         </tr>
          <% @users.each do |user| %>
         <tr>
-          <td><%= image_tag('profile.jpg') %></td>
+          <td>  <%= image_tag('profile.jpg') %></td>
 
           <td><%= user.name %></td>
-          <td class="btn btn-sm btn-success"><%= link_to "show", user_path(user.id) %></td>
+          <td><%= link_to "show", user_path(user.id) %></td>
         </tr>
+          <% end %>
       </table>
     </div>
     </div>
@@ -61,4 +62,4 @@
 
 
 </main>
-  <% end %>
+
